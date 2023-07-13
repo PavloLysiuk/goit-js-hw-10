@@ -1,3 +1,5 @@
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
+
 const selectors = {
   select: document.querySelector('.breed-select'),
   loader: document.querySelector('.loader'),
