@@ -1,6 +1,6 @@
-import axios from 'axios';
-import { Notify } from 'notiflix/build/notiflix-notify-aio';
-import SlimSelect from 'slim-select';
+import { fetchBreeds } from './cat-api';
+// import { Notify } from 'notiflix/build/notiflix-notify-aio';
+// import SlimSelect from 'slim-select';
 new SlimSelect({
   select: '.breed-select',
 });
@@ -13,3 +13,4 @@ const selectors = {
 };
 
 selectors.select.addEventListener('change', onSelect);
+console.log(fetchBreeds());
