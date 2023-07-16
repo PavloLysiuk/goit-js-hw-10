@@ -1,9 +1,9 @@
-import { fetchBreeds } from './cat-api';
-// import { Notify } from 'notiflix/build/notiflix-notify-aio';
-// import SlimSelect from 'slim-select';
-new SlimSelect({
-  select: '.breed-select',
-});
+import { fetchBreeds, fetchCatByBreed } from './cat-api';
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
+import SlimSelect from 'slim-select';
+// new SlimSelect({
+//   select: '.breed-select',
+// });
 
 const selectors = {
   select: document.querySelector('.breed-select'),
@@ -12,5 +12,8 @@ const selectors = {
   catInfo: document.querySelector('.cat-info'),
 };
 
-selectors.select.addEventListener('change', onSelect);
-console.log(fetchBreeds());
+// selectors.select.addEventListener('change', onSelect);
+
+// function onSelect(e) {}
+
+fetchBreeds();
