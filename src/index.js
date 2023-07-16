@@ -1,5 +1,9 @@
 import axios from 'axios';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
+import SlimSelect from 'slim-select';
+new SlimSelect({
+  select: '.breed-select',
+});
 
 const selectors = {
   select: document.querySelector('.breed-select'),
@@ -7,3 +11,5 @@ const selectors = {
   error: document.querySelector('.error'),
   catInfo: document.querySelector('.cat-info'),
 };
+
+selectors.select.addEventListener('change', onSelect);
