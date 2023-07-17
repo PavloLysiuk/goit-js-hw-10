@@ -20,13 +20,12 @@ function fetchBreeds() {
 }
 
 function fetchCatByBreed(breedId) {
-  const END_POINT = '/images/search?breed_ids=${breedId}';
+  const END_POINT = `/images/search?breed_ids=${breedId}`;
   fetch(`${BASE_URL}${END_POINT}&api_key=${API_KEY}`)
     .then(response => {
       if (!response.ok) {
         throw new Error(response.statusText);
       }
-      console.log(response);
       return response.json();
     })
     .then(data => {
@@ -36,5 +35,3 @@ function fetchCatByBreed(breedId) {
 }
 
 export { fetchBreeds, fetchCatByBreed };
-
-fetchCatByBreed('abys')
