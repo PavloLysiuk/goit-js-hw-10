@@ -4,7 +4,7 @@ var t="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof self?self:"u
         <p class="description">${s[0].description}</p>
         <p class="temperament">
           <span>Temperament: </span>${s[0].temperament}
-        </p>`}).catch(t=>l(t))}function l(){a.select.classList.remove("is-hidden"),a.loader.classList.add("is-hidden"),(0,i.Notify).failure("Oops! Something went wrong! Try reloading the page!",{width:"320px",position:"center-top",fontSize:"16px"})}a.select.classList.add("is-hidden"),a.loader.classList.add("is-hidden"),a.error.classList.add("is-hidden"),a.catInfo.classList.add("is-hidden"),fetch(`${e}/breeds?api_key=${s}`).then(t=>{if(!t.ok)throw Error(t.statusText);return t.json()}).then(t=>t).then(t=>{let e=t.map(({id:t,name:e})=>`
+        </p>`}).catch(t=>l(t))}function l(){a.select.classList.remove("is-hidden"),a.loader.classList.add("is-hidden"),a.catInfo.classList.add("is-hidden"),(0,i.Notify).failure("Oops! Something went wrong! Try reloading the page!",{width:"320px",position:"center-top",fontSize:"16px"})}a.select.classList.add("is-hidden"),a.loader.classList.add("is-hidden"),a.error.classList.add("is-hidden"),a.catInfo.classList.add("is-hidden"),fetch(`${e}/breeds?api_key=${s}`).then(t=>{if(!t.ok)throw Error(t.statusText);return t.json()}).then(t=>t).then(t=>{let e=t.map(({id:t,name:e})=>`
     <option value="${t}">${e}</option>
     `).join("");a.select.innerHTML=e,new(function(t){return t&&t.__esModule?t.default:t}(n))({select:".breed-select"}),a.select.addEventListener("change",o),a.select.classList.remove("is-hidden")}).catch(t=>l(t));
-//# sourceMappingURL=index.d5605542.js.map
+//# sourceMappingURL=index.aa4d5753.js.map

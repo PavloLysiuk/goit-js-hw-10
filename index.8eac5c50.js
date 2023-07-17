@@ -4,7 +4,7 @@
         <p class="description">${s[0].description}</p>
         <p class="temperament">
           <span>Temperament: </span>${s[0].temperament}
-        </p>`}).catch(t=>c(t))}function c(){l.select.classList.remove("is-hidden"),l.loader.classList.add("is-hidden"),(0,a.Notify).failure("Oops! Something went wrong! Try reloading the page!",{width:"320px",position:"center-top",fontSize:"16px"})}l.select.classList.add("is-hidden"),l.loader.classList.add("is-hidden"),l.error.classList.add("is-hidden"),l.catInfo.classList.add("is-hidden"),fetch(`${i}/breeds?api_key=${n}`).then(t=>{if(!t.ok)throw Error(t.statusText);return t.json()}).then(t=>t).then(t=>{var e;let s=t.map(({id:t,name:e})=>`
+        </p>`}).catch(t=>c(t))}function c(){l.select.classList.remove("is-hidden"),l.loader.classList.add("is-hidden"),l.catInfo.classList.add("is-hidden"),(0,a.Notify).failure("Oops! Something went wrong! Try reloading the page!",{width:"320px",position:"center-top",fontSize:"16px"})}l.select.classList.add("is-hidden"),l.loader.classList.add("is-hidden"),l.error.classList.add("is-hidden"),l.catInfo.classList.add("is-hidden"),fetch(`${i}/breeds?api_key=${n}`).then(t=>{if(!t.ok)throw Error(t.statusText);return t.json()}).then(t=>t).then(t=>{var e;let s=t.map(({id:t,name:e})=>`
     <option value="${t}">${e}</option>
     `).join("");l.select.innerHTML=s,new((e=o)&&e.__esModule?e.default:e)({select:".breed-select"}),l.select.addEventListener("change",r),l.select.classList.remove("is-hidden")}).catch(t=>c(t))}();
-//# sourceMappingURL=index.363e8d8c.js.map
+//# sourceMappingURL=index.8eac5c50.js.map
