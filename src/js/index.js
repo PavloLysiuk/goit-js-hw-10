@@ -117,6 +117,7 @@ function onSelectBreed(e) {
 function onError() {
   selectors.select.classList.remove('is-hidden');
   selectors.loader.classList.add('is-hidden');
+  selectors.catInfo.classList.add('is-hidden');
 
   Notify.failure('Oops! Something went wrong! Try reloading the page!', {
     width: '320px',
