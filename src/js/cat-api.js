@@ -31,3 +31,23 @@ function fetchCatByBreed(breedId) {
 }
 
 export { fetchBreeds, fetchCatByBreed };
+
+// async function fetchBreeds() {
+//   const END_POINT = '/breeds';
+//   const response = await fetch(`${BASE_URL}${END_POINT}?api_key=${API_KEY}`);
+//   if (!response.ok) {
+//     throw new Error(response.statusText);
+//   }
+//   const data = await response.json();
+//   return data;
+// }
+
+// async function fetchCatByBreed(breedId) {
+//   const END_POINT = `/images/search?breed_ids=${breedId}`;
+//   const response = await fetch(`${BASE_URL}${END_POINT}&api_key=${API_KEY}`);
+//   if (!response.ok) {
+//     throw new Error(response.statusText);
+//   }
+//   const data = await response.json();
+//   return data;
+// }
