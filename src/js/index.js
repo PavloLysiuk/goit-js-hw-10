@@ -20,22 +20,17 @@ selectors.select.addEventListener('change', onSelectBreed);
 fetchBreeds()
   .then(data => {
     const markup = data
-      .map(({ id, name }) => `<option value="${id}">${name}</option>`)
-      .join('');
+      .map(({ id, name }) => `
+      <div class='select-wrapper'><option value="${id}">${name}</option></div>
+      `
+      ).join('');
     selectors.select.innerHTML = markup;
     new SlimSelect({
       select: '.breed-select',
     });
-    loader.classList.replace('loader', 'is-hidden');
+    loader.classList.add('is-hidden');
   })
   .catch(error => onError(error));
-
-function createMarkupBreedList() {
-  const markup = Breeds.map(
-    ({ id, name }) => `<option value="${id}">${name}</option>`
-  ).join('');
-  select.insertAdjacentHTML('beforeend', markup);
-}
 
 function onSelectBreed(e) {
   selectors.loader.classList.replace('is-hidden', 'loader');

@@ -26,7 +26,6 @@ function fetchCatByBreed(breedId) {
       return response.json();
     })
     .then(data => {
-      console.log(data);
       return data;
     });
 }
