@@ -1,0 +1,6 @@
+{
+    "nodejs.editor.formatOnSave.prettier.mode": "Enabled",
+    "autoSave": true,
+    "autoSave.delay": 1000,
+    "editor.guides": []
+}
