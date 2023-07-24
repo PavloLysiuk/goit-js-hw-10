@@ -66,7 +66,7 @@ const selectors = {
   error: document.querySelector('.error'),
   catInfo: document.querySelector('.cat-info'),
 };
-s
+
 selectors.select.classList.add('is-hidden');
 selectors.loader.classList.add('is-hidden');
 selectors.error.classList.add('is-hidden');
